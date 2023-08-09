@@ -5,6 +5,7 @@ for (var i = 0; i < numberOfBtn.length; i++) {
     document.querySelectorAll(".drumbtn")[i].addEventListener("click", function () {
         var button = this.textContent;
         btnPress(button);
+        btnAnimation(button)
     })
 }
 function play(address){
@@ -14,6 +15,7 @@ function play(address){
 document.addEventListener("keypress", function(event){
     console.log(event.key);
     btnPress(event.key);
+    btnAnimation(event.key);
 })
 function btnPress(key){
     switch(key){
@@ -42,4 +44,11 @@ function btnPress(key){
             default:
                 break;
     }
+}
+function btnAnimation(key){
+   var activeBtn = document.querySelector("."+key);
+   activeBtn.classList.add("pressed");
+   setTimeout(function(){
+       activeBtn.classList.remove("pressed");
+   } ,100);
 }

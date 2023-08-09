@@ -3,7 +3,7 @@
   margin: 0;
 }
 body {
-  background-color: blueviolet;
+  background-color: rgb(217, 199, 233);
 }
 
 .main {
@@ -26,6 +26,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(167, 0, 161);
 }
+
 .w {
   background-image: url("/images/crash.png");
 }
@@ -46,4 +47,11 @@ body {
 }
 .l {
   background-image: url("/images/tom4.png");
+}
+
+.pressed{
+  box-shadow: 0 5px 15px rgba(248, 9, 9, 0.4);
+  color: red;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
 }
