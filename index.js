@@ -5,6 +5,11 @@ for (var i = 0; i < numberOfBtn.length; i++) {
     document.querySelectorAll(".drumbtn")[i].addEventListener("click", function () {
         var button = this.textContent;
         btnPress(button);
+<<<<<<< HEAD
+        btnActive(button);
+=======
+        btnAnimation(button)
+>>>>>>> main
     })
 }
 function play(address){
@@ -14,6 +19,11 @@ function play(address){
 document.addEventListener("keypress", function(event){
     console.log(event.key);
     btnPress(event.key);
+<<<<<<< HEAD
+    btnActive(event.key);
+=======
+    btnAnimation(event.key);
+>>>>>>> main
 })
 function btnPress(key){
     switch(key){
@@ -42,4 +52,11 @@ function btnPress(key){
             default:
                 break;
     }
+}
+function btnActive(key){
+    var active = document.querySelector("."+key);
+    active.classList.add("pressed");
+    setTimeout(function(){
+        active.classList.remove("pressed");
+    }, 100);
 }
